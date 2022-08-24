@@ -1,0 +1,75 @@
+@import '../../styles/pallete.scss';
+
+.garage {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &__container {
+    color: $white;
+  }
+
+  &__counter {
+    font-weight: 700;
+    font-size: 1.25rem;
+    padding: 0.5rem 0;
+  }
+
+  &__page {
+    font-weight: 700;
+  }
+
+  &__result {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    opacity: 0;
+    z-index: 2;
+    padding: 1rem;
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 1rem;
+    background-color: $light;
+    transition: all 0.25s;
+    color: $black;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.active {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  width: 23rem;
+
+  &__text-input {
+    padding: 0.25rem 0.5rem;
+  }
+
+  &__button {
+    width: 6rem;
+    background-color: $button-color;
+
+    &:hover {
+      background-color: $button-color-hover;
+    }
+
+    &:disabled {
+      background-color: $button-color-disabled;
+    }
+
+    &_main {
+      width: 9.5rem;
+    }
+  }
+}

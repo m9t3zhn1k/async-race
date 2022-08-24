@@ -1,0 +1,55 @@
+@import '../../styles/pallete.scss';
+
+.car {
+  height: 49.6px;
+  width: 100px;
+  display: block;
+
+  &__container {
+    margin: 0.5rem 0;
+    
+    & > *:not(:last-child) {
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  
+  &__engine-button {
+    background-color: $button-color;
+
+    &:hover {
+      background-color: $button-color-hover;
+    }
+
+    &:disabled {
+      background-color: $button-color-disabled;
+    }
+  }
+
+  &__road-container {
+    position: relative;
+    padding: 0.25rem 0.5rem;
+    border-bottom: 2px dashed $light;
+    border-top: 2px dashed $light;
+    background-color: $grey;
+
+    &::after {
+      position: absolute;
+      right: 85px;
+      top: 24px;
+      height: 10px;
+      width: 58px;
+      content: "";
+      background-image: url(../../assets/icons/finish-line.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: top;
+      transform: rotate(90deg);
+    }
+  }
+}

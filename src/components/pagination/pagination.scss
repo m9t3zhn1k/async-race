@@ -1,0 +1,20 @@
+@import '../../styles/pallete.scss';
+
+.pagination {
+  display: flex;
+  gap: 1rem;
+  margin: 0.5rem 0;
+
+  &__button {
+    width: 6rem;
+    background-color: $button-color;
+
+    &:hover {
+      background-color: $button-color-hover;
+    }
+
+    &:disabled {
+      background-color: $button-color-disabled;
+    }
+  }
+}

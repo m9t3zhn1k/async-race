@@ -1,0 +1,43 @@
+@import "./pallete.scss";
+@import "./reset.scss";
+
+html {
+  font-size: 16px;
+  background-color: $black;
+  color: $light;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 0.05rem;
+}
+
+.main {
+  padding: 0.5rem 30px;
+}
+
+.button {
+  padding: 0.25rem 0.5rem;
+  background-color: $light;
+  border-radius: 0.25rem;
+  color: $black;
+  transition: all 0.25s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $white;
+  }
+
+  &:active {
+    background-color: $black;
+  }
+
+  &:not(:disabled):active {
+    color: $white;
+  }
+
+  &:disabled {
+    cursor: auto;
+  }
+
+  &.active {
+    background-color: $active;
+  }
+}

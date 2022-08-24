@@ -1,0 +1,42 @@
+@import '../../styles/pallete.scss';
+
+.winners {
+  display: flex;
+  flex-direction: column;
+
+  &__counter {
+    font-weight: 700;
+    font-size: 1.25rem;
+    padding: 0.5rem 0;
+  }
+
+  &__page {
+    font-weight: 700;
+  }
+  
+  &__car {
+    height: 24.3px;
+    width: 50px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.table {
+  width: 500px;
+  border-collapse: collapse;
+
+  &__head {
+    background-color: $button-color;
+    color: $black;
+
+    &_sort {
+      cursor: pointer;
+    }
+  }
+
+  &__cell {
+    padding: 0.5rem;
+    text-align: center;
+  }
+}
